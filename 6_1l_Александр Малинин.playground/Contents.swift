@@ -218,9 +218,9 @@ extension Queu {
 
 
 extension Queu {
-    func tellThestory(story: (SportCar) -> String) -> String {
+    func tellThestory(story: (Queu) -> String) -> String {
         for element in car_tunnel {
-            story(element)
+            story(element as! Queu<T>)
         }
         return"Вот и вся история"
     }
